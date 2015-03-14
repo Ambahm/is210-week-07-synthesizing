@@ -33,7 +33,7 @@ def get_party_stats(families, table_size=6):
     for fam in families:
         for size in fam:
             counter += 1  # end of inner loop
-            # size = size
+            size = size
         if len(fam) <= table_size:
             tables += 1
         elif len(fam) > table_size:
