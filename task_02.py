@@ -16,12 +16,13 @@ def prepare_email(appointments):
         'Dear Max,\nI look forward to meeting with you on March 3.\nBest, \nMe']
     """
     i = 0
+    new_list = []
     for member in appointments:
         member = appointments[i]
         name = member[0]
         date = member[1]
+        i += 1
         information = 'Dear {},\nI look forward to meeting with you \
 on {}.\nBest, \nMe'.format(name, date)
-        i += 1
-        new_list = [information]
+        new_list.append(information)
     return new_list
