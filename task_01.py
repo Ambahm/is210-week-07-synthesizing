@@ -32,16 +32,8 @@ def get_party_stats(families, table_size=6):
 
     for fam in families:
         for size in fam:
-            counter += 1  # end of inner loop
-            size = size
-        if len(fam) <= table_size:
-            tables += 1
-        elif len(fam) > table_size:
-            if len(fam) % table_size == 0:
-                tables += len(fam) / table_size
-            else:
-                tables += (len(fam) / table_size) + 1  # end of outer loop
-
+            counter += 1
+        tables += -(-len(fam) // table_size)
     total_guest += counter
     total_tables += tables
     return total_guest, total_tables
