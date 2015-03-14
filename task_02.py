@@ -2,12 +2,9 @@
 # -*- coding: utf-8 -*-
 """A prepare email module"""
 
-NEW_LIST = []
-
 
 def prepare_email(appointments):
     """A prepare email funcion.
-
     Args:
         appointments: a list of two-item tuples with name and time.
 
@@ -26,5 +23,5 @@ def prepare_email(appointments):
         information = 'Dear {},\nI look forward to meeting with you \
 on {}.\nBest, \nMe'.format(name, date)
         i += 1
-        NEW_LIST.append(information)
-    return NEW_LIST
+        new_list = [information]
+    return new_list
