@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """A get_party_status function"""
 
-DATA = []
+DATA = ()
 
 
 def get_party_stats(families, table_size=6):
@@ -25,9 +25,7 @@ def get_party_stats(families, table_size=6):
     total_table = 0
     for family in families:
         family = families[i]
+        i += 1
         total_member += len(family)
         total_table += (-(-len(family)//table_size))
-        i += 1
-    DATA.append(total_member)
-    DATA.append(total_table)
-    return tuple(DATA)
+    return tuple((total_member, total_table))
