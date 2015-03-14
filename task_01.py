@@ -25,15 +25,15 @@ def get_party_stats(families, table_size=6):
         (1118, 263)
     """
 
-    counter = 0
     total_guest = 0
     total_tables = 0
     tables = 0
-
+    guess = []
     for fam in families:
         for size in fam:
-            counter += 1
+            guess.append(size)
         tables += -(-len(fam) // table_size)
-    total_guest += counter
+
+    total_guest += len(guess)
     total_tables += tables
     return total_guest, total_tables
