@@ -7,7 +7,5 @@ def get_party_stats(families, table_size=6):
     table = 0
     for i in families:
         headcount += len(i)
-        table = float(table_size)
+        table += -(-len(i)//table_size)
     return headcount, table
-
-print get_party_stats([['Jan'], ['Jen', 'Jess'], ['Jem', 'Jack', 'Janis']])
