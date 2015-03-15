@@ -2,8 +2,9 @@
 # *-* coding: utf-8 *-*
 """Doctstring"""
 
+EMAIL = ()
+
 def prepare_email(appointments):
-    appointments = ['(), ()']
     """Creating a new client using their email
 
     Arg:
@@ -17,10 +18,19 @@ def prepare_email(appointments):
         ['Dear Jen,\nI look forward to meeting with you on 2015.\nBest,\nMe',
         'Dear Max,\nI look forward to meeting you on March 3.\nBest\nMe']
     """
-    return appointments
 
-email = []
-n_email = 'Dear {},\nI look forward to meeting with you on {}.\nBest,\nMe'
+    i = 0
+    appointments = ()
+    n_email = 'Dear {},\nI look forward to meeting with you on {}.\nBest,\nMe'
 
-for info in appointments:
-    email.append(n_email.format(info[0], info[1]))
+    return n_email
+
+    for info in appointments:
+        info = appointments[i]
+        name = appointments.format(0)
+        day = appointments.format(1)
+        i += 1
+        final_email = n_email.format(name, day)
+        send_email = n_email.append(final_email)
+        
+    
