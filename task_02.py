@@ -23,6 +23,6 @@ def prepare_email(appointments):
         date = member[1]
         i += 1
         information = 'Dear {},\nI look forward to meeting with you \
-on {}.\nBest, \nMe'.format(name, date)
+on {}.\nBest,\nMe'.format(name, date)
         new_list.append(information)
     return new_list
