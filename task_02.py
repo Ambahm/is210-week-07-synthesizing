@@ -14,11 +14,10 @@ def prepare_email(appointments):
     Example:
     
     """
-    output =[]
-    email = ''
+    output = []
+    name = ''
     body = 'Dear {},\nI look forward to meeting with you on {}.\nBest,\nMe.'
     for i in appointments:
-        email += body.format(i[0],i[1])
-        output.append(email)
+        name += body.format(i[0],i[1])
+        output = [name]
     return output
-prepare_email([('Jen', '2015'), ('Max', 'March 3')])
