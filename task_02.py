@@ -13,5 +13,5 @@ def prepare_email(appointments):
     email = []
     body = 'Dear {},\nI look forward to meeting with you on {}.\nBest,\nMe'
     for i in appointments:
-        email += [body.format(i[0],i[1])]
+        email += [body.format(i[0], i[1])]
     return email
