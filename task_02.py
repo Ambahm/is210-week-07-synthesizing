@@ -3,10 +3,11 @@
 """Doctstring"""
 
 def prepare_email(appointments):
+    appointments = ['(), ()']
     """Creating a new client using their email
 
     Arg:
-        appoitment(tuple): a tuple with client's name & appt time
+        appointments(tuple): a tuple with client's name & appt time
 
     Return:
         client's info & appoitment time
@@ -16,11 +17,10 @@ def prepare_email(appointments):
         ['Dear Jen,\nI look forward to meeting with you on 2015.\nBest,\nMe',
         'Dear Max,\nI look forward to meeting you on March 3.\nBest\nMe']
     """
-    return n_appt
+    return appointments
 
+email = []
 n_email = 'Dear {},\nI look forward to meeting with you on {}.\nBest,\nMe'
 
-n_appt = []
-
 for info in appointments:
-    n_appt.append(n_email.format(info[0], info[1]))
+    email.append(n_email.format(info[0], info[1]))

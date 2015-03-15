@@ -2,10 +2,10 @@
 # *-* coding: utf-8 *-*
 """Analyze a list to return a total headcount for catering and tables."""
 
-MEMBER = [['Angel', 'Micheal', 'Samuel'], ['Jennifer', 'James']]
+families = ['', '', '']
+table_size = 6
 
-def get_party_stats(families, table_size=6):
-    
+def get_party_stats(families, table_size=6):  
     """Get total headcount and table amounts for party.
 
     Args:
@@ -25,15 +25,12 @@ def get_party_stats(families, table_size=6):
     """
     return t_guest, t_tables
 
-counter = 0
-t_guest = 0
-t_tables = 0
+t_guest = families
+t_tables = 6
 
 for fnum in families:
-    for t_size in fnum:
-        counter += 1
+    t_guest = families.append(families[[], [], []])
     tables += -(-len(fnum) // table_size)
-    t_guest += counter
-    t_tables += tables
+
 
 
