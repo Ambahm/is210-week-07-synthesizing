@@ -20,11 +20,8 @@ def prepare_email(appointments):
     """
 
     n_email = 'Dear {},\nI look forward to meeting with you on {}.\nBest,\nMe'
-    i = 0
-    n_appt = []    
+    n_appt = []   
 
     for info in appointments:
-        i += 1
-        n_appt.append(n_email.format('Jen', '2015'))
+        n_appt.append(n_email.format('Jen', 'March 31, 2015'))
         return n_appt
-    
