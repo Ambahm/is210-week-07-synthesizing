@@ -26,6 +26,6 @@ def get_party_stats(families, table_size=6):
     for name in families:
         tcount = -(-len(name) // table_size)
         ele += tcount
-        for item in name:
+        for _ in name:
             count += 1
     return (count, ele)
