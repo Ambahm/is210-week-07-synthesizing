@@ -26,7 +26,7 @@ def get_party_stats(families, table_size=6):
     t_member = 0
     t_table = 0
     for party in families:
-        party += families[i]
+        i += 1
         t_member = len(party)
         t_table = (-(-len(party) // table_size))
         return (t_member, t_table)
