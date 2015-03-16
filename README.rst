@@ -167,7 +167,7 @@ Examples
 
 .. code:: pycon
 
-    >>> prepare_email([('Jen', '2015'), ('Max', 'March 3')]
+    >>> prepare_email([('Jen', '2015'), ('Max', 'March 3')])
     ['Dear Jen,\nI look forward to meeting with you on 2015.\nBest,\nMe',
     'Dear Max,\nI look forward to meeting you on March 3.\nBest\nMe']
 
