@@ -13,13 +13,18 @@ def prepare_email(appointments):
         str:  Merged letters.
 
     Examples:
-        >>> myfunc(2, 3)
-        ‘5, 3, Banana’
+        >>> prepare_email([('john', '05:16PM'), ('Wiley2', 'Monday')])
+        ['Dear Wiley,\nI look forward to meeting with you on 05:16PM.
+        \nBest,\nMe', 'Dear Wiley2,\nI look forward to meeting with
+        you on Monday.\nBest,\nMe']
 
-        >>> myfunc(1, 2, ‘Horse’)
-        ‘3, 2, Horse’
+        >>> prepare_email([('Sal', '5PM'), ('Chick', 'Monday'), ('Tom', '6p')])
+        ['Dear Sal,\nI look forward to meeting with you on 5PM.\nBest,\nMe',
+        'Dear Chick,\nI look forward to meeting with you on Monday.\nBest,\nMe',
+        'Dear Tom,\nI look forward to meeting with you on 6p.\nBest,\nMe']
     """
     letter = 'Dear {},\nI look forward to meeting with you on {}.\nBest,\nMe'
-    string = []
-    for name, date in (appointments):
-        return letter.format(name, date)
+    alltr = []
+    for name, date in appointments:
+        alltr.append(letter.format(name, date))
+    return alltr
