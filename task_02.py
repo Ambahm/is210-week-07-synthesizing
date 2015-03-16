@@ -21,13 +21,12 @@ def prepare_email(appointments):
 
     record = 0
     message = []
+    template = 'Dear {},\nI look forward to meeting with you on {}.\nBest,\nMe'
     for member in appointments:
         member = appointments[record]
         name = member[0]
         date = member[1]
         record += 1
-        template = 'Dear {},\nI look forward to meeting with you on /{}.\nBest,\
-        nMe'.format(name, date)
-        message.append(template)
+        message.append(template.format(name, date))
 
     return message
